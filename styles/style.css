@@ -1,5 +1,5 @@
 #starting-view {
-  background-image: url(../images/background-image.png);
+  background-image: url(../images/background-trial3.png);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -8,5 +8,50 @@
 
   width: 100vw;
   height: 100vh;
-  justify-content: center;
+  align-items: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
+
+.game-title {
+  font-family: "IM Fell English SC", Georgia, serif;
+  color: #ffd447;
+  font-size: 5.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 3px;
+  margin: 0;
+  margin-top: 100px;
+  text-shadow: 2px 2px 0 #65400e, 0 0 10px #fff8d1;
+}
+.game-title .subtitle {
+  font-size: 2.5rem;
+  color: #ffd447;
+  letter-spacing: 1px;
+  text-shadow: 1.5px 1.5px 0 #65400e, 0 0 4px #fff8d1;
+  font-weight: bold;
+  display: block;
+}
+#start-button {
+  margin-top: 12em;
+  font-family: "IM Fell English SC", Georgia, serif;
+  color: #65400e;
+  font-size: 1.3rem;
+  padding: 1em 2em;
+  border-radius: 6px;
+  border: 1.7px solid #65400e;
+  background: #ffd447;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  box-shadow: 2px 2px 0 #65400e50;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  border
+}
+#start-button:hover {
+  background: #ffe175;
+  box-shadow: 0 6px 20px #ffd44777, 0 0 22px #65400e66;
+  transform: translateY(-2px) scale(1.03);
 }

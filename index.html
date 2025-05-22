@@ -10,7 +10,7 @@
   <body>
     <main>
       <!--Starting view-->
-      <div id="starting-view">
+      <div class="starting-view">
         <div class="title-wrapper">
           <h1 class="game-title">
             ECHOES
@@ -20,6 +20,22 @@
         </div>
         <button id="start-button">START</button>
       </div>
+      <!--Initial story container-->
+      <div class="story-view">
+        <img id="story-image" src="" />
+        <div id="story-box">
+          <div id="story-text"></div>
+          <button id="next-button">Next</button>
+        </div>
+      </div>
+      <!--Setting the players name-screen-->
+      <div class="name-container">
+        <div class="name-question">What is your name adventurer?</div>
+        <div class="player-input-box"></div>
+        <input type="text" id="player-name" placeholder="Enter your name..." />
+      </div>
     </main>
+    <script src="./js code/main.js"></script>
+    <script src="./js code/story.js"></script>
   </body>
 </html>

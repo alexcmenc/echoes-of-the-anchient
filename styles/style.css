@@ -1,21 +1,38 @@
-#starting-view {
-  background-image: url(../images/background-trial3.png);
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  background-position: center;
-  background-repeat: no-repeat;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.starting-view {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  background-image: url(../images/starting-screen/background-final.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black; /* fallback in case image fails */
+
+  overflow: hidden;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
 
 .game-title {
   font-family: "IM Fell English SC", Georgia, serif;
-  color: #ffd447;
+  color: #fecc27;
   font-size: 5.5rem;
   font-weight: bold;
   text-align: center;
@@ -35,23 +52,133 @@
   display: block;
 }
 #start-button {
-  margin-top: 12em;
+  margin-top: 5em;
   font-family: "IM Fell English SC", Georgia, serif;
   color: #65400e;
   font-size: 1.3rem;
   padding: 1em 2em;
   border-radius: 6px;
-  border: 1.7px solid #65400e;
+  border: 2.5px solid #503008;
   background: #ffd447;
   font-weight: bold;
   letter-spacing: 2.5px;
   box-shadow: 2px 2px 0 #65400e50;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
-  border
+  position: static;
 }
+
 #start-button:hover {
   background: #ffe175;
   box-shadow: 0 6px 20px #ffd44777, 0 0 22px #65400e66;
   transform: translateY(-2px) scale(1.03);
+}
+
+.name-container {
+  background-image: url(../images/player-name-screen/ChatGPT\ Image\ 19_05_2025\,\ 21_46_49.png);
+  background-size: cover;
+  display: none;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.story-view,
+.name-container {
+  display: none;
+}
+#story-text,
+#next-btn {
+  position: relative;
+  z-index: 1;
+  color: black;
+  background-color: white;
+}
+
+.story-view {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+#story-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#story-box {
+  display: block;
+  position: relative; /* Makes this the positioning container for the button */
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 3rem auto; /* Centers it horizontally */
+  font-family: "IM Fell English SC", Georgia, serif;
+  color: #fff8d1;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  text-shadow: 1px 1px 3px #000;
+  align-items: center;
+}
+
+#story-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px black;
+  color: #fff8d1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-shadow: 2px 2px 6px #000;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  z-index: 2;
+}
+
+#next-button {
+  position: absolute;
+  font-family: "IM Fell English SC", Georgia, serif;
+  background-color: #5a3825;
+  color: #fbe9cc;
+  border: 3px solid #3e2604;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  box-shadow: 2px 2px 8px #65400e88;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+  font-weight: bold;
+  right: 1.9rem;
+  bottom: 2.5rem;
+}
+#next-button:hover {
+  background-color: #ffe275;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #ffdf7690, 0 0 10px #65400e66;
+  color: #3e2604;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

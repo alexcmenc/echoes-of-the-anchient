@@ -31,11 +31,46 @@
       <!--Setting the players name-screen-->
       <div class="name-container">
         <div class="name-question">What is your name adventurer?</div>
-        <div class="player-input-box"></div>
-        <input type="text" id="player-name" placeholder="Enter your name..." />
+        <div class="player-input-box">
+          <input type="text" id="name-input" placeholder="Enter your name..." />
+          <button id="submit-name">Start Game</button>
+        </div>
+      </div>
+      <div class="level1">
+        <div class="hud-left">
+          <div class="hud-section">
+            <span id="level-name">Level 1</span>
+            <span id="score">Kills: 0</span>
+            <div class="coin-bag">
+              <img src="./images/coin-bag.png" alt="Coins" />
+              <span id="coin-count">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="game-area">
+          <div id="player"></div>
+        </div>
+        <div class="hud-right">
+          <div class="player-avatar">
+            <img src="images/player-class.png" alt="Player Class" />
+          </div>
+          <div class="health-wrapper">
+            <span id="health-label">HP</span>
+            <div id="health-container">
+              <div id="health-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="game-over-screen" style="display: none">
+        <h2>Game Over</h2>
+        <p>You died. Try again?</p>
+        <button id="restart-button">Restart</button>
       </div>
     </main>
-    <script src="./js code/main.js"></script>
+    <script src="./js code/player.js"></script>
     <script src="./js code/story.js"></script>
+    <script src="./js code/main.js"></script>
+    <script src="./js code/game.js"></script>
   </body>
 </html>

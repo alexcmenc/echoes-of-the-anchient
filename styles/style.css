@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,12 +25,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: black; /* fallback in case image fails */
+  background-color: black;
 
   overflow: hidden;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap");
 
 .game-title {
   font-family: "IM Fell English SC", Georgia, serif;
@@ -74,15 +74,6 @@ body {
   transform: translateY(-2px) scale(1.03);
 }
 
-.name-container {
-  background-image: url(../images/player-name-screen/ChatGPT\ Image\ 19_05_2025\,\ 21_46_49.png);
-  background-size: cover;
-  display: none;
-  flex-direction: column;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .story-view,
 .name-container {
   display: none;
@@ -117,11 +108,11 @@ body {
 
 #story-box {
   display: block;
-  position: relative; /* Makes this the positioning container for the button */
+  position: relative;
   border-radius: 12px;
   padding: 2rem;
   max-width: 700px;
-  margin: 3rem auto; /* Centers it horizontally */
+  margin: 3rem auto;
   font-family: "IM Fell English SC", Georgia, serif;
   color: #fff8d1;
   font-size: 1.3rem;
@@ -181,4 +172,212 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("../images/player-name-screen/requesting-name-player.png");
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+  animation: fadeInNameContainer 1.5s ease forwards;
+  padding: 20px;
+}
+@keyframes fadeInNameContainer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name-question {
+  font-family: "MedievalSharp", cursive;
+  font-size: 2rem;
+  color: #ffeaa7;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 20px;
+}
+
+.player-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.player-input-box input {
+  font-family: "MedievalSharp", cursive;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: 2px solid #a77c3b;
+  border-radius: 10px;
+  background-color: rgba(255, 249, 235, 0.95);
+  color: #4b2e10;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.player-input-box input:focus {
+  border-color: #ffeaa7;
+  box-shadow: 0 0 10px #ffeaa7;
+  outline: none;
+}
+
+#submit-name {
+  font-family: "MedievalSharp", cursive;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #a77c3b, #ffc107);
+  border: 2px solid #6e4c1c;
+  color: #fff8dc;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+#submit-name:hover {
+  background: linear-gradient(135deg, #ffc107, #a77c3b);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #ffeaa7;
+}
+.level1 {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+.hud-left {
+  width: 10%;
+  min-width: 100px;
+  padding: 20px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hud-left .coin-bag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hud-left .coin-bag img {
+  width: 24px;
+  height: 24px;
+}
+
+.hud-right {
+  width: 10%;
+  min-width: 100px;
+  padding: 20px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.player-avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.health-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+}
+
+#health-label {
+  font-weight: bold;
+  font-size: 12px;
+  color: #333;
+}
+
+#health-container {
+  flex: 1;
+  height: 18px;
+  background-color: #ccc;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#health-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #28a745;
+  transition: width 0.3s ease;
+}
+
+#game-area {
+  width: 80%;
+  height: 100%;
+  background: #f8f8f8;
+  border: 3px solid #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.goblin {
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/frame-sprite-sheets/goblin.png"); /* your path */
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 1024px 1024px;
+  position: absolute;
+  animation: goblin-run 0.8s steps(8) infinite;
+}
+
+#player {
+  width: 40px;
+  height: 40px;
+  background: blue;
+  position: absolute;
+  left: 20px;
+  bottom: 85px;
+}
+.game-over-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #111;
+  color: white;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 10;
+}
+.bullet {
+  width: 12px;
+  height: 4px;
+  background: black;
+  position: absolute;
 }

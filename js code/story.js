@@ -26,17 +26,22 @@ function displayScene() {
   const storyStage = storyScene[currentSceneIndex];
   document.querySelector("#story-image").src = storyStage.image;
   document.querySelector("#story-text").textContent = storyStage.text;
+  storyImage.style.animation = "none";
+  void storyImage.offsetWidth;
+  storyImage.style.animation = "fadeIn 2s ease";
   storyText.style.animation = "none";
   void storyText.offsetWidth;
-  storyText.style.animation = "fadeIn 1s ease forwards";
+  storyText.style.animation = "fadeIn 2s ease forwards";
 }
-nextBtn.addEventListener("click", () => {
-  currentSceneIndex++;
+document.addEventListener("DOMContentLoaded", () => {
+  const nextBtn = document.getElementById("next-button");
 
-  if (currentSceneIndex < storyScene.length) {
-    displayScene();
-  } else {
-    // missing the start level 1 button
-    window.location.reload();
-  }
+  nextBtn.addEventListener("click", () => {
+    currentSceneIndex++;
+    if (currentSceneIndex < storyScene.length) {
+      displayScene();
+    } else {
+      screenDisplayed("name");
+    }
+  });
 });

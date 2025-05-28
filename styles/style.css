@@ -344,14 +344,24 @@ body {
 }
 
 .goblin {
-  width: 40px;
-  height: 40px;
-  background-image: url("../images/frame-sprite-sheets/goblin.png"); /* your path */
+  width: 64px;
+  height: 64px;
+  background-image: url("../images/frame-sprite-sheets/goblin\ sprite\ sheet.png"); /* your path */
   background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 1024px 1024px;
+  background-position: 0 -64px;
+  background-size: 704px 320px;
   position: absolute;
-  animation: goblin-run 0.8s steps(8) infinite;
+  animation: goblin-run 1s steps(11) infinite;
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+@keyframes goblin-run {
+  from {
+    background-position-x: 0;
+  }
+  t {
+    background-position-x: -704px;
+  }
 }
 
 #player {

@@ -19,19 +19,19 @@ const levels = [
     goblinSpeed: 2,
     spawnRate: 1800,
     kills: 5,
-    background: "url('./images/levels/level1-bosque.png')",
+    background: "url('/images/levels/level1-bosque.png')",
   },
   {
     name: "level 2",
     goblinSpeed: 3,
     spawnRate: 1100,
     kills: 12,
-    background: "url('./images/levels/level2-bosque.png')",
+    background: "url('/images/levels/level2-bosque.png')",
   },
   {
     name: "Final Boss",
     boss: true,
-    background: "url('./images/levels/final-boss.png')",
+    background: "url('/images/levels/final-boss.png')",
   },
 ];
 

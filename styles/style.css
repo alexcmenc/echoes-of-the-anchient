@@ -21,7 +21,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-image: url(../images/starting-screen/background-final.png);
+  background-image: url("./images/starting-screen/background-final.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -183,7 +183,7 @@ body {
   width: 100vw;
   height: 100vh;
 
-  background-image: url("../images/player-name-screen/requesting-name-player.png");
+  background-image: url("./images/player-name-screen/requesting-name-player.png");
   background-size: cover;
   background-position: center;
 
@@ -346,7 +346,7 @@ body {
 .goblin {
   width: 64px;
   height: 64px;
-  background-image: url("../images/frame-sprite-sheets/goblin\ sprite\ sheet.png"); /* your path */
+  background-image: url("./images/frame-sprite-sheets/goblin\ sprite\ sheet.png"); /* your path */
   background-repeat: no-repeat;
   background-position: 0 -64px;
   background-size: 704px 320px;
